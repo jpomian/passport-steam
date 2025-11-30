@@ -7,17 +7,6 @@
     "email": "liam@curry.name",
     "url": "http://www.liamcurry.com/"
   },
-  "contributors": [
-    {
-      "name": "Toby Archer",
-      "email": "toby@nerdping.com",
-      "url": "http://github.com/mnzt"
-    },
-    {
-      "name": "Welps",
-      "url": "https://github.com/welps"
-    }
-  ],
   "ava": {
     "failFast": true,
     "verbose": true
@@ -30,9 +19,12 @@
     "url": "http://github.com/liamcurry/passport-steam/issues"
   },
   "main": "./lib/passport-steam",
+  "type": "module",
   "dependencies": {
     "@passport-next/passport-openid": "^1.0.0",
-    "steam-web": "0.4.0"
+    "dotenv": "^17.2.3",
+    "steam-web": "0.4.0",
+    "steamidconvert": "^0.2.4"
   },
   "devDependencies": {
     "ava": "^0.10.0",
@@ -43,11 +35,11 @@
   },
   "scripts": {
     "test": "ava test/*.test.js",
-    "example": "node examples/signon/app.js",
+    "start": "node examples/signon/app.js",
     "example-router": "node examples/signon/app-router.js"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 14.0.0"
   },
   "licenses": [
     {
